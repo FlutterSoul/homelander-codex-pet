@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "reviewer": "independent labeled visual QA worker",
+  "overall": "pass_with_warnings",
+  "directions": [
+    {"direction":"000","verdict":"warning","expected":"up","observed":"Pupils high in the sclera, raised lids and brows, centered nose, lifted chin, and slightly reclined head.","reason":"Unmistakable up cardinal; 337.5 to 000 has a minor visible construction and registration step."},
+    {"direction":"022.5","verdict":"pass","expected":"up-right","observed":"Horizontal pupils, nose, and face shift slightly screen-right; pupils remain high and chin raised.","reason":"Clear first clockwise diagonal step."},
+    {"direction":"045","verdict":"pass","expected":"up-right","observed":"Pupils and nose sit distinctly screen-right; gaze and chin remain clearly elevated.","reason":"Balanced up-right diagonal."},
+    {"direction":"067.5","verdict":"pass","expected":"up-right","observed":"Face and pupils strongly approach screen-right; pupils remain slightly high with reduced chin lift.","reason":"Natural transition into 090."},
+    {"direction":"090","verdict":"pass","expected":"right","observed":"Pupils and nose point toward the screen-right edge, the right-facing facial profile is explicit, and the chin remains level.","reason":"Unmistakable right cardinal."},
+    {"direction":"112.5","verdict":"pass","expected":"down-right","observed":"Pupils, nose, and facial plane remain screen-right; pupils lower slightly and chin begins to tuck.","reason":"Correct first step below right."},
+    {"direction":"135","verdict":"pass","expected":"down-right","observed":"Face and pupils remain clearly screen-right; pupils are below center with a visibly lowered chin.","reason":"Balanced down-right diagonal."},
+    {"direction":"157.5","verdict":"warning","expected":"down-right","observed":"Nose and pupils retain a subtle screen-right component; gaze is strongly down with lowered lids and tucked chin.","reason":"Semantic direction passes; the transition to 180 has a modest scale and construction step."},
+    {"direction":"180","verdict":"warning","expected":"down","observed":"Pupils sit low, upper lids lower, chin and head pitch downward, and the nose remains horizontally centered.","reason":"Unmistakable down cardinal; entry from 157.5 is a local continuity outlier."},
+    {"direction":"202.5","verdict":"pass","expected":"down-left","observed":"Pupils, nose, and face move slightly screen-left; pupils remain strongly low with chin tucked.","reason":"Correct first clockwise step away from down."},
+    {"direction":"225","verdict":"pass","expected":"down-left","observed":"Pupils and facial plane are clearly screen-left; gaze and chin remain clearly downward.","reason":"Balanced down-left diagonal."},
+    {"direction":"247.5","verdict":"pass","expected":"down-left","observed":"Face and pupils strongly approach screen-left; pupils remain slightly low and chin is mildly lowered.","reason":"Natural transition into 270."},
+    {"direction":"270","verdict":"pass","expected":"left","observed":"Pupils and nose point toward the screen-left edge, the left-facing facial profile is explicit, and the chin is level.","reason":"Unmistakable left cardinal."},
+    {"direction":"292.5","verdict":"pass","expected":"up-left","observed":"Pupils, nose, and facial plane remain screen-left; pupils rise slightly and chin begins lifting.","reason":"Correct first step above left."},
+    {"direction":"315","verdict":"pass","expected":"up-left","observed":"Face and pupils are clearly screen-left; pupils are above center with a visibly raised chin.","reason":"Balanced up-left diagonal."},
+    {"direction":"337.5","verdict":"warning","expected":"up-left","observed":"Nose and pupils retain a subtle screen-left component; gaze is strongly up with lifted lids and chin.","reason":"Semantic direction passes; the 337.5 to 000 closure has the largest metric and visible construction step."}
+  ],
+  "boundary_review": [
+    {"pair":"157.5->180","verdict":"warning","accepted":true,"reason":"Direction advances from down-right to centered down without reversal; diff 2361, center shift 3.0 px, and area ratio 1.083 create a minor normal-size pop, not a semantic failure."},
+    {"pair":"337.5->000","verdict":"warning","accepted":true,"reason":"Direction advances from up-left to centered up without wrong quadrant; diff 3009, center shift 3.81 px, and area ratio 1.074 create a noticeable but non-blocking loop-closure step."}
+  ],
+  "metric_review":"Transparent interior-hole warnings match natural gaps between boots, legs, arms, and cape. Boundary outliers remain reviewed warnings because every labeled direction is readable and the loop never reverses."
+}
